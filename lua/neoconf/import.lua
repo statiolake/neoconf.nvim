@@ -13,7 +13,7 @@ function M.setup()
   end
   if Config.options.import.coc then
     table.insert(Config.local_patterns, {
-      pattern = "coc-settings.json",
+      pattern = ".vim/coc-settings.json",
       key = "coc",
       schema_key = "lspconfig.*",
     })
