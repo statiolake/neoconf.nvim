@@ -15,8 +15,11 @@ end
 ---@param defaults T|nil
 ---@param opts WorkspaceOptions|nil
 ---@return T
-function M.get(key, defaults, opts)
-  return require("neoconf.workspace").get(opts).settings:get(key, { defaults = defaults })
+function M.get(key, defaults, opts, expand)
+  return require("neoconf.workspace").get(opts).settings:get(key, {
+    defaults = defaults,
+    expand = expand,
+  })
 end
 
 return M
